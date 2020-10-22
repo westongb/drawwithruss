@@ -1,0 +1,27 @@
+.lightbox{
+    position: fixed;
+    bottom: -100px;
+    left: 30vw;
+    height: 100vh;
+}
+
+.lightbox .imageTitle{
+    z-index: 1;
+    color: white;
+    position: fixed;
+   
+}
+
+.lightbox img{
+    height: 80vh;
+    position: fixed;
+    bottom: 50;
+  
+}
+
+.lightbox button{
+   
+    z-index: 1;
+    position: fixed;
+    bottom: 50;
+}
