@@ -1,10 +1,13 @@
 import React, { useState, useCallback } from "react";
-import { render } from "react-dom";
-import Gallery from "react-photo-gallery";
-import Carousel, { Modal, ModalGateway } from "react-images";
-import { photos } from "./photos";
-import Lightbox from "./Components/lightbox";
-import "./Components/gallary.css";
+import RussGallary from "./Components/Gallary/gallary";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import NavBar from "./NavBar";
+import createHistory from 'history/createBrowserHistory';
 
 
 export default function Home(){
@@ -23,7 +26,12 @@ export default function Home(){
 
   return (
     <div>
-        <a>Go to Gallary</a>
+        
+    
+     
+        <h1>
+          Where does this go.
+        </h1>
     </div>
   );
 }
