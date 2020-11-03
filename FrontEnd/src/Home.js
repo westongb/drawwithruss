@@ -8,7 +8,11 @@ import {
 } from "react-router-dom";
 import NavBar from "./NavBar";
 import createHistory from 'history/createBrowserHistory';
-
+import GallaryHome from "./Components/Gallary/GallaryHome";
+import Drawwithruss from "./Components/lessons/dwrHome";
+import Login from "./Components/Login/LoginForm";
+import {LoginContext} from "./Components/Login/Authentication";
+import Orderform from "./Components/Gallary/Orderform";
 
 export default function Home(){
 //   const [currentImage, setCurrentImage] = useState(0);
@@ -26,12 +30,33 @@ export default function Home(){
 
   return (
     <div>
-        
+
     
+        <Router>
+        <Link to="/DrawWithRuss">Learn to Draw</Link>      
+        <Link to="/Gallary">Gallary</Link>
+        <Link to="/Login">Login</Link>
+       
+       
+  <Switch>
      
-        <h1>
-          Where does this go.
-        </h1>
+       
+      <Route exact path="/Gallary">
+        <GallaryHome/>
+      </Route> 
+      <Route exact path="/Drawwithruss">
+        <Drawwithruss/>
+      </Route>
+      <Route exact path="/Login">
+        <Login/>
+      </Route>
+      <Route path="/Gallary/Orderform">
+        <Orderform/>
+      </Route>
+      </Switch>
+    </Router>
+          
+        
     </div>
   );
 }

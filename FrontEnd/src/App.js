@@ -10,11 +10,14 @@ import {
   Link
 } from "react-router-dom";
 import RussGallary from "./Components/Gallary/gallary";
+import {LoginProvider} from './Components/Login/Authentication';
 
 function App() {
   return (
     <div className="App">
-      <NavBar/>
+      <LoginProvider>
+        <Home/>
+      </LoginProvider>
     </div>
   );
 }

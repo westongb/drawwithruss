@@ -5,32 +5,21 @@ import {
     Route,
     Link
   } from "react-router-dom";
-  import Home from "./Home";
+import Home from "./Home";
 import OrderForm from "./Components/Gallary/Orderform";
-  import RussGallary from "./Components/Gallary/gallary"
+import RussGallary from "./Components/Gallary/gallary"
+import Login from "./Components/Login/LoginForm";
+import GallaryHome from "./Components/Gallary/GallaryHome";
+import Drawwithruss from "./Components/lessons/dwrHome";
 
 export default function NavBar (){
 
 return(
     <Router>
-          <Link to="/">Home</Link>      
-        <Link to="/Gallary">Gallary2</Link>
-       
-       
-     
-      <Switch>
-       
-      <Route exact path="/Gallary">
-        <RussGallary/>
-      </Route>
-      <Route exact path="/">
-        <Home/>
-      </Route>
-      <Route exact path="/order">
-        <OrderForm/>
-      </Route>
-        </Switch>
-      
+          <Link to="/Gallary">Home</Link>      
+        {/* <Link to="/Gallary/Home">Gallary</Link> */}
+        <Link to="/Login">Login</Link>
+        <Link to="/Gallary/Orderform">order</Link>
     </Router>
 )
 
