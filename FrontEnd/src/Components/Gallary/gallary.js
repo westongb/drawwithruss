@@ -11,11 +11,13 @@ export default function Home(){
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
+  //OpenModel
   const openLightbox = useCallback((event, { photo, index }) => {
     setCurrentImage(index);
     setViewerIsOpen(true);
   }, []);
 
+  //closeModal
   const closeLightbox = () => {
     setCurrentImage(0);
     setViewerIsOpen(false);
@@ -28,14 +30,6 @@ export default function Home(){
       <ModalGateway>
         {viewerIsOpen ? (
           <Modal onClose={closeLightbox}>
-            {/* <Carousel
-              currentIndex={currentImage}
-              views={photos.map(x => ({
-                ...x,
-                srcset: x.srcSet,
-                caption: x.title
-              }))}
-            /> */}
                 <Lightbox
                     currentIndex={currentImage}
                     views = {photos.map(x => ({

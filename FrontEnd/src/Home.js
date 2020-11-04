@@ -13,6 +13,7 @@ import Drawwithruss from "./Components/lessons/dwrHome";
 import Login from "./Components/Login/LoginForm";
 import {LoginContext} from "./Components/Login/Authentication";
 import Orderform from "./Components/Gallary/Orderform";
+import {GallaryProvider, GallaryContext} from "./Components/Gallary/GallaryContext";
 
 export default function Home(){
 //   const [currentImage, setCurrentImage] = useState(0);
@@ -30,7 +31,7 @@ export default function Home(){
 
   return (
     <div>
-
+             <GallaryProvider>
     
         <Router>
         <Link to="/DrawWithRuss">Learn to Draw</Link>      
@@ -50,13 +51,13 @@ export default function Home(){
       <Route exact path="/Login">
         <Login/>
       </Route>
-      <Route path="/Gallary/Orderform">
+      <Route path="/Gallary/Orderform"      >
         <Orderform/>
       </Route>
       </Switch>
     </Router>
           
-        
+    </GallaryProvider>
     </div>
   );
 }
