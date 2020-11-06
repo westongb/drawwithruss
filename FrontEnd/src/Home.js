@@ -14,6 +14,8 @@ import Login from "./Components/Login/LoginForm";
 import {LoginContext} from "./Components/Login/Authentication";
 import Orderform from "./Components/Gallary/Orderform";
 import {GallaryProvider, GallaryContext} from "./Components/Gallary/GallaryContext";
+import OrderSummary from "./Components/POS/OrderSummary";
+
 
 export default function Home(){
 //   const [currentImage, setCurrentImage] = useState(0);
@@ -53,6 +55,9 @@ export default function Home(){
       </Route>
       <Route path="/Gallary/Orderform"      >
         <Orderform/>
+      </Route>
+      <Route path="/ShoppingCart"      >
+        <OrderSummary/>
       </Route>
       </Switch>
     </Router>

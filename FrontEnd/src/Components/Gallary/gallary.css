@@ -1,3 +1,13 @@
+
+.gallaryBody{
+    background-color: #231F20;
+}
+
+.gallaryBody h1{
+    color: blanchedalmond;
+}
+
+
 .lightbox{
     position: fixed;
     bottom: -100px;

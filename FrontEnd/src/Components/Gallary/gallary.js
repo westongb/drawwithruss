@@ -24,7 +24,7 @@ export default function Home(){
   };
 
   return (
-    <div>
+    <div className="gallaryBody">
         <h1>Title</h1>
       <Gallery photos={photos} onClick={openLightbox} />
       <ModalGateway>
